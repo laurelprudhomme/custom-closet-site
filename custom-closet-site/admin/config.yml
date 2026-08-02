@@ -1,0 +1,113 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pricing"
+    label: "Pricing"
+    files:
+      - file: "data/pricing.json"
+        label: "All Pricing"
+        name: "pricing"
+        fields:
+          - label: "Jeans"
+            name: "jeans"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.price}}"
+            fields:
+              - {label: "Style", name: "label", widget: "string"}
+              - {label: "Price", name: "price", widget: "string"}
+          - label: "Overalls"
+            name: "overalls"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.price}}"
+            fields:
+              - {label: "Style", name: "label", widget: "string"}
+              - {label: "Price", name: "price", widget: "string"}
+          - label: "Fascinator Hats"
+            name: "hats"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.price}}"
+            fields:
+              - {label: "Style", name: "label", widget: "string"}
+              - {label: "Price", name: "price", widget: "string"}
+          - label: "Baseball Caps"
+            name: "baseball"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.price}}"
+            fields:
+              - {label: "Style", name: "label", widget: "string"}
+              - {label: "Price", name: "price", widget: "string"}
+          - label: "Graduation Caps"
+            name: "gradcaps"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.price}}"
+            fields:
+              - {label: "Style", name: "label", widget: "string"}
+              - {label: "Price", name: "price", widget: "string"}
+          - label: "Headbands"
+            name: "headbands"
+            widget: "list"
+            summary: "{{fields.label}} — {{fields.price}}"
+            fields:
+              - {label: "Style", name: "label", widget: "string"}
+              - {label: "Price", name: "price", widget: "string"}
+
+  - name: "gallery"
+    label: "Gallery Photos"
+    files:
+      - file: "data/gallery.json"
+        label: "All Galleries"
+        name: "gallery"
+        fields:
+          - label: "Jeans"
+            name: "jeans"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: "Photo", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "string"}
+              - {label: "Subtitle", name: "sub", widget: "string", required: false}
+          - label: "Overalls"
+            name: "overalls"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: "Photo", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "string"}
+              - {label: "Subtitle", name: "sub", widget: "string", required: false}
+          - label: "Fascinator Hats"
+            name: "hats"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: "Photo", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "string"}
+              - {label: "Subtitle", name: "sub", widget: "string", required: false}
+          - label: "Baseball Caps"
+            name: "baseball"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: "Photo", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "string"}
+              - {label: "Subtitle", name: "sub", widget: "string", required: false}
+          - label: "Graduation Caps"
+            name: "gradcaps"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: "Photo", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "string"}
+              - {label: "Subtitle", name: "sub", widget: "string", required: false}
+          - label: "Headbands"
+            name: "headbands"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: "Photo", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "string"}
+              - {label: "Subtitle", name: "sub", widget: "string", required: false}
